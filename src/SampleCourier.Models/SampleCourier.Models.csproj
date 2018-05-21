@@ -13,8 +13,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MassTransit.Automatonymous" Version="5.1.0" />
-    <PackageReference Include="MassTransit.EntityFrameworkCore" Version="5.1.0" />
+    <PackageReference Include="MassTransit.Automatonymous" Version="5.1.2" />
+    <PackageReference Include="MassTransit.EntityFrameworkCore" Version="5.1.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.3" />
   </ItemGroup>
 

@@ -28,9 +28,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="5.1.0" />
-    <PackageReference Include="MassTransit.RabbitMQ" Version="5.1.0" />
-    <PackageReference Include="MassTransit.SerilogIntegration" Version="5.1.0" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="5.1.2" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="5.1.2" />
+    <PackageReference Include="MassTransit.SerilogIntegration" Version="5.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
     <PackageReference Include="Serilog.Enrichers.Thread" Version="3.0.0" />
