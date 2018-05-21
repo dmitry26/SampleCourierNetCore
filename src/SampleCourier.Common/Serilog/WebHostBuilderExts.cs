@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
 namespace Dmo.Serilog
@@ -14,8 +13,6 @@ namespace Dmo.Serilog
 	{
 		public static IWebHostBuilder UseSerilogFromConfig(this IWebHostBuilder builder) =>
 			(builder ?? throw new ArgumentNullException(nameof(builder)))
-				.UseSerilog((ctx,cfg) => cfg.ReadFrom.Configuration(ctx.Configuration))
-				//Add Serilog.Extensions.Logging
-				.ConfigureServices(cfg => cfg.AddLogging(bldr => bldr.AddSerilog(dispose: true)));
+				.UseSerilog((ctx,cfg) => cfg.ReadFrom.Configuration(ctx.Configuration));				
 	}
 }

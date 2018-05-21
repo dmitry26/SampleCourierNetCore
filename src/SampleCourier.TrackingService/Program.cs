@@ -19,9 +19,9 @@ namespace SampleCourier.TrackingService
 		}
 
 		public static IWebHost BuildWebHost(string[] args) =>
-			WebHost.CreateDefaultBuilder(args)
-				.UseSerilogFromConfig()
+			WebHost.CreateDefaultBuilder(args)				
 				.UseStartup<Startup>()
+				.UseSerilogFromConfig()
 				.Build();
 	}
 }
