@@ -120,6 +120,8 @@ namespace SampleCourier.TrackingService.Config
 						e.UseConcurrencyLimit(1);
 						e.StateMachineSaga(machine,repository);
 					});
+
+					cfg.UseSerilog();
 				});
 			});
 		}
