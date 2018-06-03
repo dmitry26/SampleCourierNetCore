@@ -67,6 +67,13 @@ namespace SampleCourier.WebApi.Controllers
 				var str = dbCtx.Set<RoutingSlipState>().Where(x => x.CorrelationId == id).ToString();
 				var state = await dbCtx.Set<RoutingSlipState>().Where(x => x.CorrelationId == id).FirstOrDefaultAsync();
 
+				if (state == null)
+					return NotFound(new
+					{
+						TrackingNumber = id,
+						Status = "Not Available"
+					});
+
 				return Ok(new
 				{
 					TrackingNumber = state.CorrelationId,
