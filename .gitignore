@@ -4,5 +4,4 @@ obj/
 .vs
 packages/
 src/**/logs
-src/**/Properties/launchSettings.json
 src/**/appsettings.Development.json
