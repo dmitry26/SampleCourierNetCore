@@ -7,6 +7,8 @@ Adapted the project for ASP.NET core: WebApi, Swagger, MassTransit, RabitMq, Aut
 Courier is MassTransit's routing-slip implementation, which makes it possible to orchestrate distributed services into a business transaction. 
 This sample demonstrates how to create and execute a routing slip, record routing slip events, and track transaction state using Automatonymous.
 
+A postman test collection can be found in the postman folder.
+
 **WebApi console output:**
 ![](./images/WebApi.jpg "WebApi console")
 
@@ -15,3 +17,6 @@ This sample demonstrates how to create and execute a routing slip, record routin
 
 **ProcessingService console output**:
 ![](./images/ProcessingService.jpg "ProcessingService")
+
+**Web API help with Swagger**:
+![](./images/Swagger.jpg "Swagger")

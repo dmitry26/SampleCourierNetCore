@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "0754ae5e-1979-4649-a9e6-2e926bd7d0af",
+		"name": "SampleCourier",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ExecWithNum",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5648/api/exec/1/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5648",
+					"path": [
+						"api",
+						"exec",
+						"1",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5648/api/exec/8b720000-653f-1c6f-deda-08d5b83c6629",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5648",
+					"path": [
+						"api",
+						"exec",
+						"8b720000-653f-1c6f-deda-08d5b83c6629"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteOld",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5648/api/exec/old",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5648",
+					"path": [
+						"api",
+						"exec",
+						"old"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckStatus",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5648/api/exec/8b720000-653f-1c6f-0b46-08d5b868ca38",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5648",
+					"path": [
+						"api",
+						"exec",
+						"8b720000-653f-1c6f-0b46-08d5b868ca38"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExecReq",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Url\": \"http://i.imgur.com/NK8eZUe.jpg\",\n    \"Count\": 2\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5648/api/exec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5648",
+					"path": [
+						"api",
+						"exec"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
