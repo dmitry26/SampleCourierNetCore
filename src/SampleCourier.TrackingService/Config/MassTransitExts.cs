@@ -34,7 +34,7 @@ namespace SampleCourier.TrackingService.Config
 
 			var cfgSection = appConfig.GetSection("RabbitMqHost");
 
-			if (cfgSection == null)
+			if (!cfgSection.Exists())
 				throw new InvalidOperationException("Appsettings: 'RabbitMqHost' section is not found");
 
 			services.Configure<RabbitMqHostOptions>(cfgSection);
@@ -104,7 +104,9 @@ namespace SampleCourier.TrackingService.Config
 					{
 						e.PrefetchCount = epOpts.Metrics.PrefetchCount;
 						e.UseRetry(r => r.None());
-						e.LoadFrom(svcProv);
+						//e.LoadFrom(svcProv);
+						e.Consumer<RoutingSlipMetricsConsumer>(svcProv);
+						e.Consumer<RoutingSlipActivityConsumer>(svcProv);
 					});
 
 					cfg.ReceiveEndpoint(host,epOpts.ActivityMetrics.QueueName,e =>
