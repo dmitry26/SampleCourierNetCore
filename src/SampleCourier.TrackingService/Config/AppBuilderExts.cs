@@ -8,18 +8,16 @@ using SampleCourier.Models;
 
 namespace SampleCourier.TrackingService.Config
 {
-	public static class AppBuilderExts
-	{
-		public static void UseEntityFrameworkCore(this IApplicationBuilder app)
-		{
-			var svcProv = app.ApplicationServices;
+    public static class AppBuilderExts
+    {
+        public static void UseEntityFrameworkCore(this IApplicationBuilder app)
+        {
+            var svcProv = app.ApplicationServices;
 
-			using (var svcScope = svcProv.GetRequiredService<IServiceScopeFactory>().CreateScope())
-			{
-				var ctxFactory = svcProv.GetService<RoutingSlipDbContextFactory>();
-				var dbCtx = ctxFactory.CreateDbContext(Array.Empty<string>());
-				dbCtx.Database.EnsureCreated();
-			}
-		}
-	}
+            using var svcScope = svcProv.GetRequiredService<IServiceScopeFactory>().CreateScope();
+            var ctxFactory = svcProv.GetService<RoutingSlipDbContextFactory>();
+            var dbCtx = ctxFactory.CreateDbContext(Array.Empty<string>());
+            dbCtx.Database.EnsureCreated();
+        }
+    }
 }

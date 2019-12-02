@@ -5,22 +5,24 @@ using Microsoft.Extensions.Configuration;
 
 namespace SampleCourier.Models
 {
-	public class RoutingSlipDbContextFactory : IDesignTimeDbContextFactory<RoutingSlipSagaDbContext>
-	{
-		public RoutingSlipDbContextFactory() { }
+    public class RoutingSlipDbContextFactory : IDesignTimeDbContextFactory<RoutingSlipSagaDbContext>
+    {
+        public RoutingSlipDbContextFactory()
+        {
+        }
 
-		public RoutingSlipDbContextFactory(string conStr)
-		{
-			_conStr = conStr;
-		}
+        public RoutingSlipDbContextFactory(string conStr)
+        {
+            _conStr = conStr;
+        }
 
-		private string _conStr = @"Data Source=(LocalDb)\MSSQLLocalDB;Integrated Security=True;Initial Catalog=EfCoreRoutingSlip;";
+        private readonly string _conStr = @"Data Source=(LocalDb)\MSSQLLocalDB;Integrated Security=True;Initial Catalog=EfCoreRoutingSlip;";
 
-		public RoutingSlipSagaDbContext CreateDbContext(string[] args)
-		{
-			var builder = new DbContextOptionsBuilder<RoutingSlipSagaDbContext>();
-			builder.UseSqlServer(_conStr);
-			return new RoutingSlipSagaDbContext(builder.Options);
-		}
-	}
+        public RoutingSlipSagaDbContext CreateDbContext(string[] args)
+        {
+            var builder = new DbContextOptionsBuilder<RoutingSlipSagaDbContext>();
+            builder.UseSqlServer(_conStr);
+            return new RoutingSlipSagaDbContext(builder.Options);
+        }
+    }
 }
